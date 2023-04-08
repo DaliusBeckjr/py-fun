@@ -1,23 +1,27 @@
-for i in range(151): # basic
+# basic
+for i in range(151): 
     print(i)
 
-for i in range(5,1005,5): #multiples of 5
+# multiples of 5
+for i in range(5,1005,5): 
     print(i)
 
-for num in range(1,101,1):
-    string = ""
-    if num % 5 == 0:
-        string = string + "coding"
-    if num % 10 == 0:
-        string = string + " dojo"
-    if num % 5 != 0 and num % 10 != 0:
-        string = string + str(num)
-    print(string)
+# counting the dojo way
+# print int 1-100
+# divisible by 5 - print coding
+# divisible by 10 print coding dojo
+for i in range(1, 101):
+    if i % 10 == 0:
+        print("coding dojo")
+    elif i % 5 == 0:
+        print("coding")
+    else:
+        print(i)
 
 # woah that suckers huge
 # add odd integers from 0 to 500,000 and print the final sum
 sum=0
-for i in range(1,500000,2):
+for i in range(1,500001,2):
     sum+=i
 print(sum)
 
@@ -28,7 +32,13 @@ print(sum)
 for num in range(2018,0,-4):
     print (num)
 
-# flexible counter 
-lowNum = 2
+
+
+lowNum= 2
 highNum= 9
 mult= 3
+
+for i in range(lowNum,highNum +1):
+    if i % mult == 0:
+        print(i)
+
