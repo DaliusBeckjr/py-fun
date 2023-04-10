@@ -42,5 +42,4 @@ print(first_plus_length([1, 2, 3, 4, 5]))
 # return [5,3,4]
 # Example: values_greater_than_second([3]) should return False
 
-def values_greater_than_second():
-    
+
