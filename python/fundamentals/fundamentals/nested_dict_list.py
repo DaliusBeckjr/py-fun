@@ -27,7 +27,7 @@ z = [ {'x': 10, 'y': 20} ]
 z[0]['y'] = 30
 #print(z)
 
-# Iterate Through a List of Dictionaries
+# 2.) Iterate Through a List of Dictionaries
 # Create a function iterateDictionary(some_list) that, given a list 
 # of dictionaries, the function loops through each dictionary in the list
 # and prints each key and the associated value. For example, given the 
@@ -40,13 +40,15 @@ students = [
     ]
 
 #print(students) 
-def iterateDictionary(students):
-    for one_student in students:
-    output = ''
-    for key, value in one_student.items():
-        output += f'{key} - {value}, '
+def iterateDictionary(the_students):
+
+    for one_student in the_students:
+        output = ''
+        for key, value in one_student.items():
+            output += f'{key} - {value}, '
         print(output)
-iterateDictionary()
+        #print(key, value)
+iterateDictionary(students)
 
 
 
@@ -94,13 +96,13 @@ dojo = {
 #printInfo(dojo)
 
 
-def printInfo(ananas):
-    for key, value in ananas.items():
-        print(f'{len(value)} {key.upper()}')
-        for items in value:
-            print(items)
+# def printInfo(ananas):
+#     for key, value in ananas.items():
+#         print(f'{len(value)} {key.upper()}')
+#         for items in value:
+#             print(items)
 
-printInfo(dojo)
+# printInfo(dojo)
 
 # # output:
 # 7 LOCATIONS
