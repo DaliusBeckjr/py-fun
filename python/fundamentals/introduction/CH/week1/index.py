@@ -45,3 +45,10 @@ students = [
 # # if you wanted only todd's info 
 # for key, value in students[1].items():
 #     print(key, value)
+
+# how do we get them on the same line hint: did this in OH
+for one_student in students:
+    output = ''
+    for key, value in one_student.items():
+        output += f'{key} - {value}, '
+    print(output)
