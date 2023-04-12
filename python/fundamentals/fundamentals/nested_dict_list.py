@@ -75,7 +75,12 @@ iterateDictionary(students)
 # Guillen
 # Tonel
 
+def iterateDictionary2(key_name, some_list):
+    for one_student in students:
+        print(one_student[key_name])
 
+print(iterateDictionary2('first_name', students))
+print(iterateDictionary2('last_name', students))
 
 
 
@@ -96,13 +101,13 @@ dojo = {
 #printInfo(dojo)
 
 
-# def printInfo(ananas):
-#     for key, value in ananas.items():
-#         print(f'{len(value)} {key.upper()}')
-#         for items in value:
-#             print(items)
+def printInfo(ananas):
+    for key, value in ananas.items():
+        print(f'{len(value)} {key.upper()}')
+        for items in value:
+            print(items)
 
-# printInfo(dojo)
+printInfo(dojo)
 
 # # output:
 # 7 LOCATIONS
