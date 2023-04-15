@@ -1,4 +1,6 @@
 class BankAccount:
+    #class attributes
+    
     # don't forget to add some default values for these parameters!
     def __init__(self, int_rate, balance): 
         # your code here! (remember, instance attributes go here)
@@ -39,7 +41,8 @@ class BankAccount:
         return self
 
 # bonus: use a classmethod to print all instances of a Bank Account's info
-
+    # @classmethod
+    # def bank_account_info(cls, ):
 
 
 
