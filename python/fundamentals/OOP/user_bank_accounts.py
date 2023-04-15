@@ -12,4 +12,9 @@ class User:
     
     def make_deposit(self, amount):
     # your code here
-
+        return self
+    def make_withdraw(self, amount):
+    # your code here
+        return self
+    def display_user_balance(self):
+        return self
