@@ -21,6 +21,22 @@ class User:
         print(f"Happy birthday you're older")
         return self 
 
+    def adopt(self):
+        pet.owner = self
+        
+
+
+
+class Pet:
+
+    def __init__(self, name, type):
+        self.name = name
+        self.type = type
+        self.owner = none
+
+    def speak(self):
+        pass
+
     # if you want to display all the instances, then use a classmethod and 
     # access the class attribute
     @classmethod
@@ -34,6 +50,9 @@ class User:
 john = User("john", "wallace", 27)
 jacob = User("jacob", "johnson", 38)
 donny = User("donny", "king", 43)
+
+copper = Pet("orsted", "dog" )
+
 
 # invoke a method
 User.display_all_users()
