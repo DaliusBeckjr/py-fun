@@ -1,0 +1,18 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Name: {{this_name}}</h1>
+        <h2>Times: {{num of times}}</h2>
+
+        {%for i in range(num_of_times): %}
+        <p>{{this_name.title()}}</p>
+        {% endfor %}
+        <!--{# {% for student in student_info #}-->
+    </body>
+</html>
