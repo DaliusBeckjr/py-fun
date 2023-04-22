@@ -7,13 +7,34 @@
         <link href="css/style.css" rel="stylesheet">
         <!-- Inline CSS -->
         <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
             .body{
                 background-color: linen;
+            }
+            .box {
+                height: 300px;
+                width: 300px;
+                border-radius: 2px;
+                border-color: black;
+                background-color: aqua;
+                margin: 24px;
             }
         </style>
         <!-- CSS end -->
     </head>
     <body>
-        
+        <h3>My Flask Template</h3>
+<!-- <p>Phrase: {{ phrase }}</p> -->
+<p>Times: {{ times }}</p>
+    
+{% for x in range(0,times): %}
+    <p>hello</p>
+{% endfor %}
+    
+
+
     </body>
 </html>
