@@ -2,7 +2,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 @app.route('/')
 def render_list():
-    # soon enough we'll get data from a database
+    # 
     users_info = [
         {'first_name' : 'Michael', 'last_name' : 'Choi'},
         {'first_name' : 'John', 'last_name' : 'Supsupin'},
