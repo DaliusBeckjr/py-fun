@@ -17,9 +17,9 @@
     <div class="content">
       <form action="/">
         <h1>Counter</h1>
-          <p> {{session['visits']}} time</p>
-        <a href="/">
-          <button type="submit" >Add two visits</button>
+          <p> visited {{session['visits']}} times</p>
+        <a href="/add_one">
+          <button type="submit">Add two visits</button>
         </a>
         <a href="/destroy_session">
           <button type="reset">Reset</button>

@@ -15,12 +15,17 @@ def root():
         session['visits'] = 0
     return render_template('home.html')
 
+@app.route('/add_one')
+def count_up():
+    session['visits'] += 1
+    return reditect('/')
+
 
 @app.route('/destroy_session')
 def delete_visits():
-    # session.clear()
-    session.pop('visits')  #clears a specific key
-    return redirect('/')
+    if 'visit' in session:
+        session.pop('visits', None)  #clears a specific key
+        return redirect('/')
 
 
 
