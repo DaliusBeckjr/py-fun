@@ -25,7 +25,7 @@ def count_up():
 def delete_visits():
     if 'visit' in session:
         session.pop('visits', None)  #clears a specific key
-        return redirect('/')
+    return redirect('/')
 
 
 
