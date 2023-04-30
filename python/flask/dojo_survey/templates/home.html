@@ -9,28 +9,42 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="container">
     <h1>this is the home page</h1>
-    <form action="/" method="post" class="shadow-sm p-3 mb-5 bg-body rounded">
-      <form>
+    <form action="/users/results" method="post" class="shadow p-3 mb-5 bg-body rounded">
         <div class="mb-3">
           <label class="form-label">First Name:</label>
-          <input type="text" class="form-control" >
+          <input type="text" class="form-control" name="first_name">
         </div>
         <div class="mb-3">
           <label class="form-label">Last Name:</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" name="last_name">
         </div>
-        <div class="mb-3">
+        <div id="mb-3">
           <label class="form-label">Dojo Location:</label>
-          <input type="text" class="form-control">
+        <select class="form-select" aria-label="Default select example" name="dojo_location">
+          <option selected>Choose a location</option>
+          <option value="Arizona">Arizona</option>
+          <option value="California">California</option>
+          <option value="Chicago">Chicago</option>
+          <option value="New York">New York</option>
+        </select>
+        </div>
+        <br/>
+        <div class="mb-3">
+          <label class="form-label">Favorite Language: </label>
+          <select class="form-select" aria-label="Default select example" name="fav_language">
+            <option selected>Choose your preferred language</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+            <option value="PHP">PHP</option>
+          </select>
         </div>
         <div class="mb-3">
-          <label class="form-label">Favorite Language</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="mb-3">
-          <label  class="form-label">Comment (optional):</label>
-          <textarea class="form-control"  rows="3"></textarea>
+          <label for="exampleFormControlTextarea1" class="form-label">Comments (optional):</label>
+          <textarea class="form-control" rows="3" name="comments"> </textarea> 
+          
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -38,7 +52,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-    </form>
+  </div>
 
 </body>
 </html>
