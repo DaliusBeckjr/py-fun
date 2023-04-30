@@ -18,7 +18,7 @@ def root():
 @app.route('/add_one')
 def count_up():
     session['visits'] += 1
-    return reditect('/')
+    return redirect('/')
 
 
 @app.route('/destroy_session')
