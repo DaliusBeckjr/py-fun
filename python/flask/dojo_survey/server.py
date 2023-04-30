@@ -1,7 +1,7 @@
 from flask import Flask, session, request, redirect, render_template
 
 app = Flask(__name__)
-app.secret_key = "keep it a secret"
+app.secret_key = "call me abraham coz we still aint lincoln"
 
 @app.run('/')
 def root():
