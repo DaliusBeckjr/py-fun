@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <style> 
+    /* can use lang="scss" for sass */
+    * { 
+      padding: 0;
+      margin: 0;
+    }
+    .content {
+      /* max-width: 500px;
+      margin: auto; */
+      margin: 0 auto;
+      /*there's something up with left and right padding?*/
+      padding: 34px 90px 34px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Hello Users!</h1>
+    <p>{{all_users}}</p>
+    <div class="container d-flex justify-content-center">
+      <table class="table shadow p-3 mb-5 bg-body rounded">
+        <thead>
+          <tr>
+            <th scope="col">first Name</th>
+            <th scope="col">last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for one_user in all_users: %}
+          <tr>
+            <td>{{one_user.first_name}}</td>
+            <td>{{one_user.last_name}}</td>
+            <td>{{one_user.email}}</td>
+            <td>{{one_user.age}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
