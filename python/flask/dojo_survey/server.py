@@ -7,7 +7,9 @@ app.secret_key = "call me abraham coz we still aint lincoln"
 def root():
     return render_template('home.html')
 
-
+@app.run('/result')
+def result():
+    return render_template('result.html')
 
 
 
