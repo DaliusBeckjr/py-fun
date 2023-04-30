@@ -1,15 +1,12 @@
-from flask import Flask, session, request, redirect, render_template
-
+from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
-app.secret_key = "call me abraham coz we still aint lincoln"
+app.secret_key = 'call me abraham coz we still aint lincoln'
 
-@app.run('/')
+# our index route will handle rendering our form
+@app.route('/')
 def root():
-    return render_template('home.html')
+    return render_template("home.html")
 
-@app.run('/result')
-def result():
-    return render_template('result.html')
 
 
 
@@ -17,3 +14,4 @@ def result():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
+
