@@ -11,7 +11,7 @@ def root():
 def show_all_users():
     users= user.User.get_all_users() # import user
     print(users)
-    return render_template('user_dashboard.html')
+    return render_template('user_dashboard.html', all_users=users)
 
 
 
