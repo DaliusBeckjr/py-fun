@@ -1,10 +1,17 @@
 from flask import Flask, request, session, redirect, render_template
+import user
 
 app = Flask(__name__)
 
 @app.route('/')
 def root():
-    return render_template('home.html')
+    return redirect('/users/dashboard')
+
+@app.route('/users/dashboard')
+def show_all_users():
+    users= user.User.get_all_users() # import user
+    print(users)
+    return render_template('user_dashboard.html')
 
 
 
