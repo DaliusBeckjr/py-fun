@@ -3,6 +3,7 @@ import user
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def root():
     return redirect('/users')
