@@ -5,14 +5,21 @@ app = Flask(__name__)
 
 @app.route('/')
 def root():
-    return redirect('/users/dashboard')
+    return redirect('/users')
 
-@app.route('/users/dashboard')
+@app.route('/users')
 def show_all_users():
-    users= user.User.get_all_users() # import user
-    print(users)
+    users= user.User.get_all_users()
     return render_template('user_dashboard.html', all_users=users)
 
+@app.route('/users/new')
+def new_user():
+    return render_template('new_user.html')
+
+@app.route('/users/create', methods=['POST'])
+def create():
+    User.save(request.form)
+    return redirect('/users')
 
 
 
