@@ -11,7 +11,7 @@ def root():
 @app.route('/users')
 def show_all_users():
     users= user.User.get_all_users()
-    return render_template('user_dashboard.html', all_users=users)
+    return render_template('show_users.html', all_users=users)
 
 @app.route('/users/new')
 def new_user():
