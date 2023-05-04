@@ -11,11 +11,11 @@ class User:
 # the save method will be use to save our new user to the database
 # crud method: Create
     @classmethod
-    def save(cls, data);
-    query="""
-        INSERT INTO users (first_name, last_name, email) 
-        VALUES (%(first_name)s, %(last_name)s, %(email)s);
-    """
+    def save(cls, data):
+        query="""
+            INSERT INTO users (first_name, last_name, email) 
+            VALUES (%(first_name)s, %(last_name)s, %(email)s);
+        """
     results = connectToMySQL(cls.db).query_db
     
 # crud method: Read
